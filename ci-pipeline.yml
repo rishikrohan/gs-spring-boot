@@ -9,6 +9,9 @@ steps:
   displayName: 'Maven complete/pom.xml'
   inputs:
     mavenPomFile: '$(Parameters.mavenPOMFile)'
+    codeCoverageToolOption: Cobertura
+    codeCoverageFailIfEmpty: true
+    sonarQubeRunAnalysis: true
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
